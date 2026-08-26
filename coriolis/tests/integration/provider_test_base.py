@@ -64,7 +64,7 @@ class BaseTestExportProvider(abc.ABC):
 
 
 class BaseTestImportProvider(abc.ABC):
-    def initialize(self, connection_info: dict):
+    def initialize(self, connection_info: dict, source_config: dict):
         """One-time initialization, before any tests run.
 
         Can be used to list the current resources on the target provider,
